@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBB Litoral Distribuidora - Abastecendo o Varejo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .navbar-blur {
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 25%, #3b82f6 50%, #1e40af 75%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            background-size: 200% 200%;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+    </style>
+</head>
+<body class="bg-neutral-900 min-h-screen" style="font-family: 'Montserrat', sans-serif;">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 navbar-blur">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="imagens/logo.png" alt="CBB Distribuidora" class="h-8 md:h-10 w-auto">
+                </div>
+
+                <!-- Mobile Menu - Links centralizados -->
+                <div class="flex md:hidden items-center space-x-6 absolute left-1/2 transform -translate-x-1/2">
+                    <a href="#inicio" class="text-white hover:text-blue-300 font-medium transition-colors text-sm">Home</a>
+                    <a href="#sobre" class="text-white hover:text-blue-300 font-medium transition-colors text-sm">Sobre</a>
+                    <a href="#produtos" class="text-white hover:text-blue-300 font-medium transition-colors text-sm">Produtos</a>
+                    <a href="#contato" class="text-white hover:text-blue-300 font-medium transition-colors text-sm">Contato</a>
+                </div>
+
+                <!-- Desktop Menu - Centralizado -->
+                <div class="hidden md:flex items-center space-x-12 absolute left-1/2 transform -translate-x-1/2">
+                    <a href="#inicio" class="text-white hover:text-blue-300 font-medium transition-colors">Home</a>
+                    <a href="#sobre" class="text-white hover:text-blue-300 font-medium transition-colors">Sobre</a>
+                    <a href="#produtos" class="text-white hover:text-blue-300 font-medium transition-colors">Produtos</a>
+                    <a href="#contato" class="text-white hover:text-blue-300 font-medium transition-colors">Contato</a>
+                </div>
+
+                <!-- WhatsApp Icon -->
+                <div class="flex items-center ml-auto">
+                    <a href="https://wa.me/5513981017733" class="text-white hover:text-blue-300 transition-all duration-300 transform hover:scale-125 flex items-center">
+                        <i class="fab fa-whatsapp text-4xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-12 min-h-screen relative">
+        <!-- Hero Background Video -->
+        <div class="absolute inset-0 z-0">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                <source src="video/video.mp4" type="video/mp4">
+                <!-- Fallback para navegadores que não suportam vídeo -->
+                <img src="imagens/capa.jpg" alt="CBB Litoral Distribuidora" class="w-full h-full object-cover">
+            </video>
+        </div>
+
+        <!-- Content Overlay -->
+        <div class="absolute inset-0 z-10 flex flex-col justify-start items-center pt-96">
+            <div class="container mx-auto px-4">
+                <div class="text-center text-white">
+                    <!-- Logo no canto superior direito -->
+                    <div class="absolute top-20 right-4 z-20">
+                        <img src="imagens/logo.png" alt="CBB Litoral Distribuidora" class="h-16 w-auto md:h-20 drop-shadow-2xl object-contain" style="filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.95));">
+                    </div>
+                 
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mt-64">
+                        <a href="https://wa.me/5513981017733" class="bg-black hover:bg-gray-800 px-8 py-2 rounded-full font-semibold text-lg flex items-center justify-center transition-all duration-300 mx-auto">
+                            <i class="fab fa-whatsapp mr-3 text-xl text-gradient"></i>
+                            <span class="text-gradient">Entre em Contato</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-gray-800 text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-center">
+                <span class="text-blue-600">CBB</span> Litoral Distribuidora
+            </h2>
+            <p class="text-lg md:text-xl text-gray-600 mb-12 text-center max-w-4xl mx-auto">
+                Especializada em abastecer mercados e o varejo com produtos alimentícios de qualidade. 
+                Nossa missão é garantir que nossos parceiros tenham acesso aos melhores produtos 
+                com a confiabilidade e eficiência que só a CBB pode oferecer.
+            </p>
+            <div class="grid grid-cols-3 gap-2 md:gap-4 max-w-4xl mx-auto">
+                <div class="text-center">
+                    <div class="navbar-blur rounded-lg p-1 md:p-4 mb-2 md:mb-3">
+                        <i class="fas fa-truck text-lg md:text-2xl text-blue-600"></i>
+                    </div>
+                    <p class="text-gray-800 text-lg md:text-2xl font-medium">Entrega Rápida</p>
+                </div>
+                <div class="text-center">
+                    <div class="navbar-blur rounded-lg p-1 md:p-4 mb-2 md:mb-3">
+                        <i class="fas fa-shield-alt text-lg md:text-2xl text-green-600"></i>
+                    </div>
+                    <p class="text-gray-800 text-lg md:text-2xl font-medium">
+                                Qualidade<br>
+                                Garantida
+                            </p>
+                </div>
+                <div class="text-center">
+                    <div class="navbar-blur rounded-lg p-1 md:p-4 mb-2 md:mb-3">
+                        <i class="fas fa-handshake text-lg md:text-2xl text-orange-600"></i>
+                    </div>
+                    <p class="text-gray-800 text-lg md:text-2xl font-medium">Parceria Confiável</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Produtos -->
+    <main id="produtos" class="w-full max-w-6xl mx-auto px-2 py-12 bg-neutral-900">
+        <h2 class="text-3xl font-bold text-white text-center mb-12">Nossos Produtos</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+            <div class="overflow-hidden rounded-lg group">
+                <a href="catalogos/santahelena.pdf" target="_blank" class="block">
+                    <img src="imagens/santahelena.jpg" alt="Santa Helena" class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:shadow-xl">
+                </a>
+            </div>
+            <div class="overflow-hidden rounded-lg group">
+                <a href="catalogos/uau.pdf" target="_blank" class="block">
+                    <img src="imagens/uau.jpg" alt="UAU" class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:shadow-xl">
+                </a>
+            </div>
+            <div class="overflow-hidden rounded-lg group">
+                <a href="catalogos/barion.pdf" target="_blank" class="block">
+                    <img src="imagens/barion.jpg" alt="Barion" class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:shadow-xl">
+                </a>
+            </div>
+            <div class="overflow-hidden rounded-lg group">
+                <a href="catalogos/piraque.pdf" target="_blank" class="block">
+                    <img src="imagens/piraque.jpg" alt="Piraquê" class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:shadow-xl">
+                </a>
+            </div>
+            <div class="overflow-hidden rounded-lg group">
+                <a href="catalogos/matteleao.pdf" target="_blank" class="block">
+                    <img src="imagens/leao.jpg" alt="Leão" class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:shadow-xl">
+                </a>
+            </div>
+            <div class="overflow-hidden rounded-lg group">
+                <a href="catalogos/adria.pdf" target="_blank" class="block">
+                    <img src="imagens/adria.jpg" alt="Adria" class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:shadow-xl">
+                </a>
+            </div>
+            <div class="overflow-hidden rounded-lg group">
+                <a href="catalogos/vitarella.pdf" target="_blank" class="block">
+                    <img src="imagens/vitarella.jpg" alt="Vitarella" class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:shadow-xl">
+                </a>
+            </div>
+            <div class="overflow-hidden rounded-lg group">
+                <a href="catalogos/campolargo.pdf" target="_blank" class="block">
+                    <img src="imagens/campolargo.jpg" alt="Campo Largo" class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:shadow-xl">
+                </a>
+            </div>
+            <div class="overflow-hidden rounded-lg group">
+                <a href="catalogos/corote.pdf" target="_blank" class="block">
+                    <img src="imagens/corote.jpg" alt="Corote" class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-105 group-hover:shadow-xl">
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="bg-neutral-900 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center space-y-6">
+                <h3 class="text-2xl font-bold text-white mb-4">Entre em Contato</h3>
+                <!-- WhatsApp -->
+                <a href="https://wa.me/5513981017733" target="_blank" class="text-white hover:text-green-400 transition-colors flex flex-col items-center">
+                    <i class="fab fa-whatsapp text-5xl"></i>
+                    <span class="mt-2 text-2xl">WhatsApp</span>
+                </a>
+                <!-- Email -->
+                <a href="mailto:contato@cbbdistribuidora.com.br" class="text-white hover:text-blue-400 transition-colors flex flex-col items-center">
+                    <i class="fas fa-envelope text-5xl"></i>
+                    <span class="mt-2 text-2xl">Email</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-4">
+        <div class="container mx-auto px-4">
+            <p class="text-center text-white text-base flex items-center justify-center gap-1">
+                © 2025 CBB Distribuidora | Produzido por: 
+                <a href="#" class="text-white hover:opacity-80 transition-opacity flex items-center">
+                    <img src="imagens/footerj3.png" alt="J3 Digital Mídia" class="inline-block h-8 ml-1 -mt-1">
+                </a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
